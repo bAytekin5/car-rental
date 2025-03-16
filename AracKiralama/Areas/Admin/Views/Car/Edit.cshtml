@@ -1,0 +1,105 @@
+﻿@model Car
+
+<section class="content">
+    <div class="content-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary card-outline mt-5">
+                    <div class="card-header">
+                        <h3 class="card-title">Araç Bilgilerini Güncelle</h3>
+                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="hidden" asp-for="Image"/>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Araç Resmi*</label>
+                                        <br>
+                                        <img src="@Model.Image" style="height:100px;width:auto;" />
+                                        <input type="file" asp-for="Image" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Marka*</label>
+                                        <input asp-for="Brand" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Model*</label>
+                                        <input asp-for="Model" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Günlük Fiyat*</label>
+                                        <input asp-for="DailyPrice" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Araç Km*</label>
+                                        <input asp-for="Km" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Vites Tipi*</label>
+                                        <select asp-for="Transmission" class="custom-select form-control" required>
+                                            <option value="">Seçiniz..</option>
+                                            <option value="Manuel">Manuel</option>
+                                            <option value="Otomatik">Otomatik</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Koltuk Sayısı*</label>
+                                        <input asp-for="Seats" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Bagaj*</label>
+                                        <input asp-for="Luggage" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Yakıt Tipi*</label>
+                                        <select asp-for="Fuel" class="custom-select form-control" required>
+                                            <option value="">Seçiniz..</option>
+                                            <option value="Benzin">Benzin</option>
+                                            <option value="Dizel">Dizel</option>
+                                            <option value="Elektirikli">Elektirikli</option>
+                                            <option value="Lpg">Lpg</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Google Map IFrame (Src Kısmını Giriniz)*</label>
+                                        <input asp-for="GoogleMapIFrame" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Açıklama*</label>
+                                        <textarea type="text" asp-for="Description" class="form-control" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Güncelle</button>
+                        </div>
+                        <div class="card-footer clearfix">
+                            <a class="btn btn-warning btn-sm float-right" asp-action="Index">Araç Listesi</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Car>
+
+<section class="content">
+    <div class="content-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info card-outline mt-5">
+                    <div class="card-header">
+                        <h3 class="card-title">Araç Listesi</h3>
+                    </div>
+                    <div class="card-body p-0 table-responsive">
+                        <table class="table table-bordered table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Resim</th>
+                                    <th>Güncellenme Tarihi</th>
+                                    <th>Marka</th>
+                                    <th>Model</th>
+                                    <th>Günlük Fiyat</th>
+                                    <th>Araç Km</th>
+                                    <th>Vites</th>
+                                    <th>Koltuk Sayısı</th>
+                                    <th>Bagaj</th>
+                                    <th>Yakıt</th>
+                                    <th>Google Map</th>
+                                    <th>Açıklama</th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="@item.Image" style="height:30px;width:auto;"/>
+                                        </td>
+                                        <td>
+                                            @item.UpdatedTime.ToString("g")
+                                        </td>
+                                        <td>
+                                            @item.Brand
+                                        </td>
+                                        <td>
+                                            @item.Model
+                                        </td>
+                                        <td>
+                                            @item.DailyPrice ₺
+                                        </td>
+                                        <td>
+                                            @item.Km
+                                        </td>
+                                        <td>
+                                            @item.Transmission
+                                        </td>
+                                        <td>
+                                            @item.Seats
+                                        </td>
+                                        <td>
+                                            @item.Luggage
+                                        </td>
+                                        <td>
+                                            @item.Fuel
+                                        </td>
+                                        <td>
+
+                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#tt44-@item.Id">
+                                                Görüntüle
+                                            </button>
+                                            <div class="modal fade" id="tt44-@item.Id">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content bg-info">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">
+                                                                Araç Harita Bilgileri
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">×</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <iframe src="@item.GoogleMapIFrame" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @item.Description
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-xs">
+                                                Güncelle
+                                            </a>
+                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#tt4-@item.Id">
+                                                Sil
+                                            </button>
+                                            <div class="modal fade" id="tt4-@item.Id">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content bg-danger">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">
+                                                                Araç Sil
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">×</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Bu İşlem Geri Alınamaz</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-dark">Sil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer clearfix">
+                        <a class="btn btn-primary btn-sm float-right" asp-action="Create">Yeni Araç Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

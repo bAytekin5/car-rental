@@ -1,0 +1,169 @@
+﻿
+<div class="hero-wrap ftco-degree-bg" style="background-image: url('/carbook-master/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+            <div class="col-lg-8 ftco-animate">
+                <div class="text w-100 text-center mb-md-5 pb-md-5">
+                    <h1 class="mb-4">Araç Kiralamanın Kolay Yolu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="ftco-section ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Araba Listesi</span>
+                <h2 class="mb-2">Araçlarımıza Göz Atın</h2>
+            </div>
+        </div>
+        <div class="row">
+            @await Component.InvokeAsync("RandomCarsForIndex")
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-about">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/carbook-master/images/about.jpg);">
+            </div>
+            <div class="col-md-6 wrap-about ftco-animate">
+                <div class="heading-section heading-section-white pl-md-5">
+                    <span class="subheading">Hakkımızda</span>
+                    <h2 class="mb-4">Hoşgeldiniz</h2>
+
+                    <p>müşteri memnuniyetini en üst düzeyde tutmayı amaçlayan profesyonel bir araç kiralama hizmeti sunmaktayız. Geniş araç filomuz, uygun fiyatlarımız ve kolay rezervasyon süreçlerimiz ile ihtiyacınıza en uygun aracı hızlı ve güvenilir bir şekilde kiralamanızı sağlıyoruz.</p>
+                    <p>İhtiyacınıza ve bütçenize uygun araçları bulabileceğiniz geniş bir araç yelpazemiz bulunmaktadır. Ekonomik araçlardan lüks modellere, SUV'lerden aile araçlarına kadar çeşitli seçenekler sunuyoruz.</p>  
+                    <p>Kaliteli hizmeti uygun fiyatlarla sunmayı hedefliyoruz. Kiralama süresine ve tercihlerinize göre esnek fiyat seçeneklerimiz sayesinde bütçenizi zorlamadan seyahat etmenin keyfini çıkarabilirsiniz..</p>
+                    <p>Web sitemiz üzerinden sadece birkaç adımda rezervasyon yapabilirsiniz. Kullanıcı dostu arayüzümüz, hızlı ve sorunsuz bir rezervasyon süreci sunar. Aracınızı dilediğiniz tarih ve saat aralığında rezerve edebilir, ek hizmetlerden yararlanabilirsiniz..</p>
+                    <p><a asp-action="AboutUs" class="btn btn-primary py-3 px-4">Hakkımızda</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Hizmetler</span>
+                <h2 class="mb-3">Son Eklenen Hizmetlerimiz</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wedding-car"></span></div>
+                    <div class="text w-100">
+                        <h3 class="heading mb-2">Evlilik töreni</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+                    <div class="text w-100">
+                        <h3 class="heading mb-2">Şehir Transferi</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
+                    <div class="text w-100">
+                        <h3 class="heading mb-2">Havaalanı transferi</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+                    <div class="text w-100">
+                        <h3 class="heading mb-2">Tüm Şehir Turu</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-intro" style="background-image: url(/carbook-master/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 heading-section heading-section-white ftco-animate">
+                <h2 class="mb-3">Araç kiralamak için geç kalmayın.</h2>
+                <a asp-action="Cars" class="btn btn-primary btn-lg">Araçlar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section testimony-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Mutlu Müşteriler</span>
+                <h2 class="mb-3">
+                    Müşteri Yorumları
+                </h2>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    <div class="item">
+                        <div class="testimony-wrap rounded text-center py-4 pb-5">
+                            <div class="text pt-4">
+                                <p class="mb-4">"Geçen ay tatil için ailecek uzun bir yolculuğa çıktık ve SUV kiraladık. Araç son derece temiz ve bakımlıydı. Rezervasyon süreci çok kolaydı ve müşteri hizmetleri her sorumuza hızlıca yanıt verdi. Kesinlikle tekrar kullanacağım!"</p>
+                                <p class="name">Ahmet Yılmaz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap rounded text-center py-4 pb-5">
+                            <div class="text pt-4">
+                                <p class="mb-4">"İş seyahati için kısa süreli bir araca ihtiyacım vardı ve tam da aradığım hizmeti sundu. Havaalanında aracım hazırdı ve hiçbir sorun yaşamadan yolculuğumu tamamladım. Üstelik fiyatlar da oldukça makuldü. Herkese tavsiye ederim."</p>
+                                <p class="name">Berkay Aytekin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap rounded text-center py-4 pb-5">
+                            <div class="text pt-4">
+                                <p class="mb-4">"Düğün günümüz için lüks bir araç kiralamak istedik ve seçtik. Araç tam zamanında teslim edildi ve tüm gün boyunca sorunsuz bir şekilde kullandık. Hizmet kalitesi ve profesyonelliklerinden çok memnun kaldık. Harika bir deneyimdi!"</p>
+                                <p class="name">Ayşe Ata</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap rounded text-center py-4 pb-5">
+                            <div class="text pt-4">
+                                <p class="mb-4">"Şehir dışına yaptığımız kısa bir gezi için araç kiraladık. Araç oldukça yeni ve konforluydu. GPS ve bebek koltuğu gibi ek hizmetlerden de faydalandık. Müşteri destek ekibi çok yardımcı oldu. Kesinlikle tekrar tercih edeceğim."</p>
+                                <p class="name">Aslı Yılmaz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap rounded text-center py-4 pb-5">
+                            <div class="text pt-4">
+                                <p class="mb-4">
+                                    "Arkadaşlarımla yaptığımız hafta sonu kaçamağı için uygun fiyatlı bir araç kiraladık.  sunduğu esnek kiralama seçenekleri sayesinde tam ihtiyacımız olan süreyi belirleyebildik. Araçlar çok temiz ve bakımlıydı. Her şey mükemmeldi, teşekkürler!"
+                                </p>
+                                <p class="name">Mehmet Yılmaz</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
